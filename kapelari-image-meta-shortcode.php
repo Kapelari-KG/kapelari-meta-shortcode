@@ -61,7 +61,7 @@ function kkg_meta_shortcode( $atts = [], $content = null ) {
   if($query_images) {
     foreach ( $query_images->posts as $image ) {
       if($image->{$kkg_meta_atts['meta']}){
-        if($kkg_meta_atts['meta'] == 'alt') {
+        if($kkg_meta_atts['meta'] == 'post_alt') {
           $result[] .= get_post_meta($image->ID, '_wp_attachment_image_alt', TRUE);
         }else {
           $result[] .= $image->{$kkg_meta_atts['meta']};
